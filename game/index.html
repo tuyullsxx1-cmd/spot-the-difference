@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reef, Garden &amp; Stars — Spot the Difference</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<header class="hud">
+  <div class="brand">
+    <span class="logo">REEF, GARDEN &amp; STARS</span>
+    <span class="sub">spot the difference</span>
+  </div>
+  <div class="stat"><span class="label">Scene</span><span id="scene-name">—</span></div>
+  <div class="stat"><span class="label">Left</span><span id="counter">8 to find</span></div>
+  <div class="stat"><span class="label">Time</span><span id="timer">3:00</span></div>
+  <div class="stat"><span class="label">Lives</span><span id="lives">♥♥♥</span></div>
+  <div class="stat"><span class="label">Hints</span><span id="hints">Hints: 3</span></div>
+  <div class="stat"><span class="label">Score</span><span id="score">Score 0</span></div>
+  <div class="stat streak"><span id="streak"></span></div>
+  <div class="actions">
+    <button id="btn-hint" class="btn">Hint (H)</button>
+    <button id="btn-pause" class="btn">Pause (P)</button>
+    <button id="btn-restart" class="btn">Restart (R)</button>
+    <button id="btn-giveup" class="btn">Give up (G)</button>
+    <button id="btn-mute" class="btn">Sound on</button>
+    <button id="btn-title" class="btn">Scenes</button>
+  </div>
+</header>
+<main>
+  <p id="scene-sub" class="scene-sub"></p>
+  <div class="stage">
+    <figure class="panel">
+      <figcaption>Picture A — the original</figcaption>
+      <canvas id="panel-left" width="560" height="400"></canvas>
+    </figure>
+    <figure class="panel">
+      <figcaption>Picture B — spot the changes</figcaption>
+      <canvas id="panel-right" width="560" height="400"></canvas>
+    </figure>
+  </div>
+  <div id="found-list" class="found-list"></div>
+  <p class="keys">Click a difference on either picture · H hint · R restart · P pause · M mute · G give up · 1–4 pick a scene</p>
+</main>
+<div id="overlay" class="overlay hidden">
+  <div id="overlay-card" class="card"></div>
+</div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
